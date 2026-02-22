@@ -30,7 +30,32 @@
       --line:#e5e7eb;
       --card:#ffffff;
       --shadow: 0 10px 30px rgba(2,6,23,.08);
+/* Video Banner */
+.videoBanner{
+  max-width: var(--max);
+  margin: 14px auto 10px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #000;
+}
 
+.videoBanner video{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* على الجوال نخليه بانوراما أنيقة */
+.videoBanner.ratio{
+  aspect-ratio: 16 / 9;
+}
+.videoBanner.ratio video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
       /* مطابق لطابع الصورة (أزرق مخضر) */
       --brand:#0b5b6a;
       --brandDark:#094c58;
@@ -136,7 +161,19 @@
       display:grid; place-items:center;
       border:2px solid #fff;
     }
-
+<!-- Video Banner -->
+<section class="videoBanner ratio" aria-label="بنر فيديو">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+  >
+    <source src="https://cdn.imgchest.com/files/cc19a7dd4319.mp4" type="video/mp4">
+    متصفحك لا يدعم تشغيل الفيديو.
+  </video>
+</section>
     /* Breadcrumb + title */
     .crumb{
       display:flex;
