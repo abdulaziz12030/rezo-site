@@ -1,993 +1,984 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="theme-color" content="#0b5b6a" />
 
-  <!-- Primary SEO -->
-  <title>REZO | جلابيات نسائية فخمة بتصاميم راقية</title>
-  <meta name="description" content="REZO متجر جلابيات نسائية فخمة بتصاميم أنثوية راقية وخامات مختارة بعناية. اكتشفي قطع محدودة تناسب المناسبات والسهرات — شحن سريع داخل السعودية." />
+  <title>REZO | جلابيات نسائية فخمة</title>
+  <meta name="description" content="جلابيات نسائية فخمة من REZO: الريم، النور، الأثير، المدى، العروب. تصاميم راقية، خامات مختارة، وتجربة شراء سهلة." />
   <link rel="canonical" href="https://rezo.sa/" />
 
-  <!-- Social (Open Graph / Twitter) -->
+  <!-- OpenGraph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ar_SA" />
   <meta property="og:site_name" content="REZO" />
-  <meta property="og:title" content="REZO | جلابيات نسائية فخمة بتصاميم راقية" />
-  <meta property="og:description" content="جلابيات أنثوية راقية وخامات فاخرة — قطع محدودة وشحن سريع داخل السعودية." />
+  <meta property="og:title" content="REZO | جلابيات نسائية فخمة" />
+  <meta property="og:description" content="أقسام الجلابيات: الريم، النور، الأثير، المدى، العروب." />
   <meta property="og:url" content="https://rezo.sa/" />
   <meta property="og:image" content="https://rezo.sa/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="REZO | جلابيات نسائية فخمة" />
-  <meta name="twitter:description" content="جلابيات أنثوية راقية وخامات فاخرة — قطع محدودة." />
-  <meta name="twitter:image" content="https://rezo.sa/og-image.jpg" />
 
-  <!-- Performance: preconnect fonts (optional) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#070b14;
-      --panel:#0b1220;
-      --card:#0f1930;
-      --text:#eef3ff;
-      --muted:#b8c2dd;
-      --line:rgba(255,255,255,.10);
-      --brand:#f2c14e;   /* ذهبي */
-      --brand2:#7aa8ff;  /* أزرق فاتح */
-      --danger:#ff5c7a;
-      --ok:#45f5a8;
-      --radius:18px;
-      --shadow: 0 12px 40px rgba(0,0,0,.35);
-      --max: 1160px;
+      --bg:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#e5e7eb;
+      --card:#ffffff;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+
+      /* مطابق لطابع الصورة (أزرق مخضر) */
+      --brand:#0b5b6a;
+      --brandDark:#094c58;
+      --brandSoft:#e8f3f5;
+
+      --ok:#16a34a;
+      --sale:#ef4444;
+      --chip:#f8fafc;
+
+      --radius:16px;
+      --max: 1100px;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
       font-family:"Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(900px 500px at 10% 10%, rgba(122,168,255,.18), transparent 55%),
-        radial-gradient(900px 500px at 90% 25%, rgba(242,193,78,.12), transparent 55%),
-        linear-gradient(180deg, var(--bg), #050814 70%);
+      background:var(--bg);
       color:var(--text);
       line-height:1.6;
     }
     a{color:inherit; text-decoration:none}
     img{max-width:100%; display:block}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:12px 16px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      cursor:pointer;
-      transition:.18s ease;
-      user-select:none;
-      white-space:nowrap;
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 16px}
+
+    /* Top util icons (مثل اللي أعلى بالصورة) */
+    .topUtil{
+      border-bottom:1px solid var(--line);
+      background:#fff;
     }
-    .btn:hover{transform:translateY(-1px); border-color:rgba(255,255,255,.22)}
-    .btn.primary{
-      background:linear-gradient(135deg, rgba(242,193,78,.95), rgba(122,168,255,.65));
-      border-color:transparent;
-      color:#0b1220;
-      font-weight:800;
+    .topUtilRow{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:14px;
+      padding:10px 0;
+      color:#111827;
+      opacity:.9;
+      font-size:18px;
     }
-    .btn.ghost{
-      background:transparent;
-      border-color:rgba(242,193,78,.35);
-      color:var(--text);
+    .topUtilRow .icon{
+      width:34px; height:34px;
+      display:grid; place-items:center;
+      border-radius:10px;
+      border:1px solid transparent;
     }
-    .chip{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:var(--muted);
-      font-size:13px;
-    }
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background:rgba(7,11,20,.72);
+    .topUtilRow .icon:hover{border-color:var(--line); background:#fff}
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:#fff;
       border-bottom:1px solid var(--line);
     }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
+    .headerRow{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
       padding:12px 0;
-      gap:14px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
+    .leftGroup{display:flex; align-items:center; gap:10px}
+    .rightGroup{display:flex; align-items:center; gap:10px}
+
+    .logo{
       font-weight:900;
       letter-spacing:.5px;
+      display:flex; align-items:center; gap:10px;
     }
-    .logo{
-      width:40px; height:40px; border-radius:12px;
-      background:linear-gradient(135deg, rgba(242,193,78,.9), rgba(122,168,255,.65));
-      box-shadow: var(--shadow);
-      display:grid; place-items:center;
-      color:#081022;
-      font-weight:1000;
-    }
-    .navlinks{
-      display:flex; gap:14px; align-items:center; flex-wrap:wrap;
-      color:var(--muted);
-      font-weight:700;
-      font-size:14px;
-    }
-    .navlinks a{padding:8px 10px; border-radius:10px}
-    .navlinks a:hover{background:rgba(255,255,255,.05); color:var(--text)}
-    .navcta{display:flex; gap:10px; align-items:center}
-
-    .hero{
-      padding:32px 0 18px;
-    }
-    .heroGrid{
+    .logoMark{
+      width:42px; height:42px;
+      border-radius:12px;
+      background:linear-gradient(135deg, var(--brand), #0aa0b8);
+      color:#fff;
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:18px;
-      align-items:stretch;
+      place-items:center;
+      font-weight:900;
     }
-    @media (max-width: 920px){
-      .heroGrid{grid-template-columns:1fr}
-    }
-    .heroCard{
+
+    .btnIcon{
+      width:40px; height:40px;
+      border-radius:12px;
       border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:22px;
-      overflow:hidden;
+      background:#fff;
+      display:grid; place-items:center;
+      cursor:pointer;
+      transition:.15s ease;
       position:relative;
     }
-    .heroCard:before{
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(500px 220px at 20% 20%, rgba(242,193,78,.18), transparent 60%),
-                  radial-gradient(500px 220px at 80% 10%, rgba(122,168,255,.18), transparent 60%);
-      pointer-events:none;
-      opacity:.9;
+    .btnIcon:hover{transform:translateY(-1px); box-shadow:0 8px 20px rgba(2,6,23,.06)}
+    .badgeDot{
+      position:absolute;
+      top:-6px; right:-6px;
+      width:20px; height:20px;
+      border-radius:999px;
+      background:#f87171;
+      color:#fff;
+      font-size:12px;
+      display:grid; place-items:center;
+      border:2px solid #fff;
     }
-    .heroInner{position:relative}
-    .kicker{color:var(--muted); font-weight:800; letter-spacing:.2px}
-    h1{
-      margin:10px 0 10px;
-      font-size: clamp(26px, 3.2vw, 44px);
-      line-height:1.2;
-    }
-    .sub{
-      margin:0 0 16px;
-      color:rgba(238,243,255,.86);
-      font-size:16px;
-      max-width: 58ch;
-    }
-    .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .stats{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:10px;
-      margin-top:16px;
-    }
-    @media (max-width:520px){
-      .stats{grid-template-columns:1fr}
-    }
-    .stat{
-      border:1px solid var(--line);
-      background:rgba(15,25,48,.55);
-      border-radius:16px;
-      padding:12px 12px;
-    }
-    .stat b{display:block; font-size:18px}
-    .stat span{color:var(--muted); font-size:13px}
 
-    .heroMedia{
-      border:1px solid var(--line);
-      background:rgba(11,18,32,.75);
-      border-radius: var(--radius);
-      overflow:hidden;
-      box-shadow: var(--shadow);
+    /* Breadcrumb + title */
+    .crumb{
       display:flex;
-      flex-direction:column;
+      justify-content:center;
+      gap:10px;
+      color:var(--muted);
+      font-weight:700;
+      padding:16px 0 6px;
     }
-    .mediaTop{
-      padding:14px 14px 0;
+    .pageTitle{
+      text-align:center;
+      font-size:34px;
+      margin:8px 0 10px;
+      font-weight:900;
+    }
+
+    /* Tabs (الأقسام) */
+    .tabsBar{
+      display:flex;
+      justify-content:center;
+      margin:10px 0 18px;
+    }
+    .tabs{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
+      justify-content:center;
+      background:#fff;
     }
-    .heroImg{
-      aspect-ratio: 4 / 3;
-      width:100%;
-      background:
-        radial-gradient(900px 500px at 20% 30%, rgba(242,193,78,.20), transparent 55%),
-        radial-gradient(900px 500px at 70% 30%, rgba(122,168,255,.22), transparent 60%),
-        linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      display:grid; place-items:center;
-      position:relative;
-    }
-    .heroImg .placeholder{
-      width:min(360px, 75%);
-      border-radius:18px;
-      border:1px dashed rgba(255,255,255,.20);
-      padding:14px;
-      text-align:center;
-      color:var(--muted);
-      background:rgba(0,0,0,.12);
-    }
-    .section{padding:18px 0}
-    .sectionTitle{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap:10px; flex-wrap:wrap;
-      margin:0 0 12px;
-    }
-    .sectionTitle h2{
-      margin:0;
-      font-size: clamp(18px, 2.2vw, 28px);
-    }
-    .sectionTitle p{margin:0; color:var(--muted)}
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
-    }
-    @media (max-width: 900px){ .grid3{grid-template-columns:1fr} }
-
-    .feature{
+    .tab{
+      padding:10px 16px;
+      border-radius:14px;
       border:1px solid var(--line);
-      background: rgba(11,18,32,.75);
-      border-radius: 18px;
-      padding:16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      background:#fff;
+      cursor:pointer;
+      font-weight:900;
+      color:var(--text);
+      transition:.15s ease;
     }
-    .feature .icon{
-      width:44px; height:44px; border-radius:14px;
-      display:grid; place-items:center;
-      background:rgba(242,193,78,.12);
-      border:1px solid rgba(242,193,78,.25);
-      margin-bottom:10px;
-      font-size:20px;
+    .tab:hover{background:var(--brandSoft); border-color:#cfe7ec}
+    .tab.active{
+      background:var(--brand);
+      color:#fff;
+      border-color:var(--brand);
     }
-    .feature h3{margin:0 0 6px}
-    .feature p{margin:0; color:var(--muted)}
 
-    .filters{
-      border:1px solid var(--line);
-      background: rgba(11,18,32,.72);
-      border-radius: 18px;
-      padding:12px;
-      display:grid;
-      grid-template-columns: 1.4fr .9fr .9fr .9fr auto;
+    /* Search + sort */
+    .toolsRow{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      margin:0 0 10px;
+    }
+    .search{
+      flex:1;
+      min-width:240px;
+      display:flex;
       gap:10px;
       align-items:center;
     }
-    @media (max-width: 980px){
-      .filters{grid-template-columns:1fr 1fr; }
-      .filters .wide{grid-column:1/-1}
-    }
-    input, select{
+    input[type="search"], select{
       width:100%;
       padding:12px 12px;
       border-radius:14px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      color:var(--text);
+      background:#fff;
       outline:none;
+      font:inherit;
     }
-    input::placeholder{color:rgba(184,194,221,.75)}
-    select option{background:#0b1220}
-    .products{
-      margin-top:12px;
+    input[type="search"]::placeholder{color:#94a3b8}
+    .mini{
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    /* Product grid */
+    .grid{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
+      grid-template-columns:repeat(2, 1fr);
+      gap:14px;
+      padding-bottom:90px; /* مساحة للـ bottom nav */
     }
-    @media (max-width: 980px){ .products{grid-template-columns:1fr 1fr} }
-    @media (max-width: 560px){ .products{grid-template-columns:1fr} }
+    @media (min-width: 920px){
+      .grid{grid-template-columns:repeat(3, 1fr);}
+    }
 
     .card{
       border:1px solid var(--line);
-      background: rgba(15,25,48,.72);
-      border-radius: 18px;
+      border-radius:18px;
       overflow:hidden;
-      box-shadow: 0 12px 32px rgba(0,0,0,.28);
-      display:flex;
-      flex-direction:column;
-      min-height: 100%;
+      background:var(--card);
+      box-shadow:var(--shadow);
     }
-    .cardMedia{
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    .media{
       position:relative;
+      aspect-ratio: 4/3;
+      background:#eef2ff;
       display:grid;
       place-items:center;
       overflow:hidden;
     }
-    .badge{
-      position:absolute; top:12px; right:12px;
-      padding:7px 10px;
+    .media img{width:100%; height:100%; object-fit:cover}
+
+    .flagRow{
+      position:absolute;
+      top:10px; left:10px; right:10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      pointer-events:none;
+    }
+    .flag{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 10px;
       border-radius:999px;
+      background:#ecfdf5;
+      color:var(--ok);
+      font-weight:900;
       font-size:12px;
-      font-weight:900;
-      border:1px solid rgba(255,255,255,.18);
-      background: rgba(0,0,0,.25);
-      backdrop-filter: blur(8px);
+      border:1px solid #bbf7d0;
+      pointer-events:none;
     }
-    .badge.limited{border-color: rgba(242,193,78,.35); color: #fff}
-    .badge.new{border-color: rgba(122,168,255,.35); color:#fff}
-    .cardBody{padding:14px 14px 12px; display:flex; flex-direction:column; gap:8px}
-    .titleRow{display:flex; justify-content:space-between; gap:10px; align-items:flex-start}
-    .pTitle{margin:0; font-weight:900}
-    .price{font-weight:1000; color:var(--brand)}
-    .pMeta{display:flex; flex-wrap:wrap; gap:8px; color:var(--muted); font-size:13px}
-    .pDesc{margin:0; color:rgba(238,243,255,.82); font-size:14px}
-    .cardActions{margin-top:auto; padding:0 14px 14px; display:flex; gap:10px; flex-wrap:wrap}
-    .small{font-size:12px; color:var(--muted)}
-    .hr{height:1px; background:var(--line); margin:14px 0}
+    .flag.exclusive{
+      background:#f1f5f9;
+      color:#475569;
+      border-color:#e2e8f0;
+    }
 
-    .testimonials{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
+    .quickBtns{
+      position:absolute;
+      bottom:10px;
+      left:0; right:0;
+      display:flex;
+      justify-content:center;
+      gap:10px;
     }
-    @media (max-width: 900px){ .testimonials{grid-template-columns:1fr} }
-    .quote{
-      border:1px solid var(--line);
-      background:rgba(11,18,32,.72);
-      border-radius:18px;
-      padding:16px;
-    }
-    .quote p{margin:0 0 10px; color:rgba(238,243,255,.86)}
-    .quote b{display:block}
-    .quote span{color:var(--muted); font-size:13px}
-
-    details{
-      border:1px solid var(--line);
-      background:rgba(11,18,32,.72);
-      border-radius:18px;
-      padding:12px 14px;
-    }
-    details + details{margin-top:10px}
-    summary{
+    .qbtn{
+      width:44px; height:44px;
+      border-radius:999px;
+      border:0;
+      background:var(--brand);
+      color:#fff;
+      display:grid; place-items:center;
       cursor:pointer;
+      box-shadow:0 10px 25px rgba(11,91,106,.22);
+    }
+    .qbtn:active{transform:scale(.98)}
+
+    .body{
+      padding:12px 12px 10px;
+    }
+    .name{
+      margin:0;
       font-weight:900;
-      list-style:none;
+      font-size:15px;
     }
-    summary::-webkit-details-marker{display:none}
-    .faq p{margin:10px 0 0; color:var(--muted)}
-
-    footer{
-      border-top:1px solid var(--line);
-      padding:22px 0 30px;
-      color:var(--muted);
-    }
-    .footerGrid{
-      display:grid;
-      grid-template-columns: 1.3fr .7fr .7fr;
-      gap:12px;
-    }
-    @media (max-width: 900px){ .footerGrid{grid-template-columns:1fr} }
-    .footerGrid h4{margin:0 0 10px; color:var(--text)}
-    .footerGrid a{display:inline-block; padding:6px 0}
-    .miniLinks{display:flex; gap:12px; flex-wrap:wrap}
-
-    /* WhatsApp floating button */
-    .wa{
-      position:fixed;
-      left:16px;
-      bottom:16px;
-      z-index:60;
+    .subline{
+      margin:6px 0 8px;
       display:flex;
       align-items:center;
       gap:10px;
-      padding:12px 14px;
-      border-radius:999px;
-      background:rgba(69,245,168,.14);
-      border:1px solid rgba(69,245,168,.28);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
+      flex-wrap:wrap;
     }
-    .wa .dot{
-      width:12px; height:12px; border-radius:50%;
-      background: var(--ok);
-      box-shadow: 0 0 0 6px rgba(69,245,168,.12);
+    .price{
+      font-weight:1000;
+      font-size:18px;
+      color:#0f172a;
+    }
+    .oldPrice{
+      color:var(--sale);
+      text-decoration:line-through;
+      font-weight:900;
+      opacity:.7;
+    }
+    .save{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      border:1px solid #fecaca;
+      color:var(--sale);
+      background:#fff5f5;
+      padding:6px 10px;
+      border-radius:12px;
+      font-weight:900;
+      font-size:12px;
     }
 
-    /* Accessibility focus */
-    a:focus, button:focus, input:focus, select:focus, summary:focus{
-      outline:2px solid rgba(122,168,255,.75);
-      outline-offset:2px;
+    .cta{
+      display:flex;
+      gap:10px;
+      padding:0 12px 12px;
+    }
+    .btn{
+      flex:1;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--brand);
+      background:var(--brand);
+      color:#fff;
+      font-weight:900;
+      cursor:pointer;
+      text-align:center;
+    }
+    .btn.secondary{
+      background:#fff;
+      color:var(--brand);
+      border-color:var(--line);
+    }
+    .btn:hover{filter:brightness(.98)}
+    .btn:active{transform:translateY(1px)}
+
+    /* Floating WhatsApp */
+    .wa{
+      position:fixed;
+      right:16px;
+      bottom:96px; /* فوق الـ bottom nav */
+      width:56px; height:56px;
+      border-radius:999px;
+      background:#22c55e;
+      color:#fff;
+      display:grid;
+      place-items:center;
+      box-shadow:0 14px 30px rgba(34,197,94,.25);
+      z-index:60;
+    }
+
+    /* Bottom nav */
+    .bottomNav{
+      position:fixed;
+      left:0; right:0;
+      bottom:0;
+      background:#fff;
+      border-top:1px solid var(--line);
+      z-index:55;
+      padding:10px 8px 14px;
+    }
+    .bnRow{
+      display:flex;
+      justify-content:space-around;
+      gap:8px;
+      max-width:760px;
+      margin:0 auto;
+    }
+    .bnItem{
+      width:92px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:6px;
+      color:#0f172a;
+      font-weight:800;
+      font-size:12px;
+      opacity:.9;
+    }
+    .bnIcon{
+      width:44px; height:44px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      display:grid;
+      place-items:center;
+      background:#fff;
+    }
+    .bnItem.active .bnIcon{background:var(--brandSoft); border-color:#cfe7ec}
+    .bnItem.active{color:var(--brand)}
+
+    /* Modal */
+    .modalBack{
+      position:fixed; inset:0;
+      background:rgba(15,23,42,.52);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      z-index:80;
+    }
+    .modal{
+      width:min(920px, 100%);
+      background:#fff;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 30px 80px rgba(2,6,23,.25);
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+    }
+    @media (max-width: 860px){
+      .modal{grid-template-columns:1fr;}
+    }
+    .mMedia{
+      background:#f1f5f9;
+      min-height:320px;
+      position:relative;
+    }
+    .mMedia img{width:100%; height:100%; object-fit:cover}
+    .mBody{padding:16px}
+    .mHead{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:10px;
+    }
+    .close{
+      width:42px; height:42px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:#fff;
+      cursor:pointer;
+      font-size:18px;
+    }
+    .mTitle{margin:0; font-size:20px; font-weight:1000}
+    .mMeta{color:var(--muted); font-weight:800; margin:6px 0 0}
+    .mDesc{
+      margin:12px 0 12px;
+      color:#111827;
+      font-weight:700;
+    }
+    .mBuyRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .mBuyRow .btn{flex:1}
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--chip);
+      border:1px solid var(--line);
+      padding:8px 10px;
+      border-radius:999px;
+      font-weight:900;
+      color:#0f172a;
+      font-size:12px;
     }
   </style>
 
-  <!-- Structured Data: Organization + Website -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Organization",
     "name":"REZO",
     "url":"https://rezo.sa/",
-    "logo":"https://rezo.sa/logo.png",
-    "sameAs":[]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"REZO",
-    "url":"https://rezo.sa/",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://rezo.sa/?q={search_term_string}",
-      "query-input":"required name=search_term_string"
-    }
+    "logo":"https://rezo.sa/logo.png"
   }
   </script>
 </head>
 
 <body>
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="wrap">
-      <div class="nav" aria-label="التنقل الرئيسي">
-        <a class="brand" href="#top" aria-label="العودة إلى الأعلى">
-          <div class="logo" aria-hidden="true">RZ</div>
-          <div>
-            <div style="font-size:16px">REZO</div>
-            <div style="font-size:12px;color:var(--muted);font-weight:800;margin-top:-4px">REZO STYLE</div>
-          </div>
-        </a>
 
-        <div class="navlinks" role="navigation">
-          <a href="#products">الجلابيات</a>
-          <a href="#why">لماذا REZO</a>
-          <a href="#reviews">آراء العميلات</a>
-          <a href="#faq">الأسئلة الشائعة</a>
-          <a href="#contact">تواصل</a>
+  <!-- Top util bar (اختياري) -->
+  <div class="topUtil">
+    <div class="wrap">
+      <div class="topUtilRow" aria-label="روابط التواصل">
+        <div class="icon" title="بريد">✉️</div>
+        <div class="icon" title="جوال">📱</div>
+        <div class="icon" title="واتساب">💬</div>
+        <div class="icon" title="تيك توك">🎵</div>
+        <div class="icon" title="سناب">👻</div>
+        <div class="icon" title="إنستغرام">📷</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <div class="headerRow">
+        <div class="leftGroup">
+          <button class="btnIcon" id="cartBtn" aria-label="السلة">
+            🛍️
+            <span class="badgeDot" id="cartCount">1</span>
+          </button>
+          <button class="btnIcon" aria-label="حسابي">👤</button>
         </div>
 
-        <div class="navcta">
-          <a class="btn ghost" href="#products">تسوّقي الآن</a>
-          <a class="btn primary" id="waHeader" href="#" rel="nofollow">واتساب الطلب</a>
+        <a class="logo" href="#" aria-label="REZO">
+          <span class="logoMark">RZ</span>
+          <span>REZO</span>
+        </a>
+
+        <div class="rightGroup">
+          <button class="btnIcon" id="searchFocus" aria-label="بحث">🔎</button>
+          <button class="btnIcon" aria-label="القائمة">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="wrap">
+
+    <div class="crumb">
+      <span>الرئيسية</span>
+      <span>‹</span>
+      <span id="crumbCat">جلابيات النور</span>
+    </div>
+
+    <h1 class="pageTitle" id="pageTitle">جلابيات النور</h1>
+
+    <!-- Tabs -->
+    <div class="tabsBar">
+      <div class="tabs" role="tablist" aria-label="أقسام الجلابيات">
+        <button class="tab" data-cat="reem" role="tab">الريم</button>
+        <button class="tab active" data-cat="noor" role="tab">النور</button>
+        <button class="tab" data-cat="athir" role="tab">الأثير</button>
+        <button class="tab" data-cat="mada" role="tab">المدى</button>
+        <button class="tab" data-cat="uroob" role="tab">العروب</button>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="toolsRow">
+      <div class="search">
+        <input id="q" type="search" placeholder="ابحثي داخل القسم… مثال: كرزي، أبيض، Pro Black" />
+      </div>
+      <select id="sort" aria-label="ترتيب">
+        <option value="popular">الأكثر شيوعًا</option>
+        <option value="priceAsc">السعر: الأقل</option>
+        <option value="priceDesc">السعر: الأعلى</option>
+        <option value="sale">الأكثر خصمًا</option>
+      </select>
+      <div class="mini" id="resultCount">0 منتج</div>
+    </div>
+
+    <!-- Grid -->
+    <section class="grid" id="grid" aria-live="polite"></section>
+  </main>
+
+  <!-- WhatsApp floating -->
+  <a class="wa" id="waFloat" href="#" aria-label="واتساب" rel="nofollow">📱</a>
+
+  <!-- Bottom nav -->
+  <nav class="bottomNav" aria-label="التنقل السفلي">
+    <div class="bnRow">
+      <a class="bnItem" href="#" onclick="scrollTo({top:0,behavior:'smooth'});return false;">
+        <div class="bnIcon">🏠</div>
+        <div>الرئيسية</div>
+      </a>
+      <a class="bnItem" href="#" onclick="document.getElementById('q').focus();return false;">
+        <div class="bnIcon">🔎</div>
+        <div>بحث</div>
+      </a>
+      <a class="bnItem" href="#" onclick="alert('صفحة حسابي لاحقًا');return false;">
+        <div class="bnIcon">👤</div>
+        <div>حسابي</div>
+      </a>
+      <a class="bnItem active" href="#" onclick="alert('الأقسام (موجودة فوق)');return false;">
+        <div class="bnIcon">☰</div>
+        <div>الأقسام</div>
+      </a>
+      <a class="bnItem" href="#" onclick="alert('السلة لاحقًا');return false;">
+        <div class="bnIcon">🛍️</div>
+        <div>السلة</div>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modalBack" id="modalBack" role="dialog" aria-modal="true" aria-label="تفاصيل المنتج">
+    <div class="modal">
+      <div class="mMedia">
+        <img id="mImg" alt="" src="" />
+      </div>
+      <div class="mBody">
+        <div class="mHead">
+          <div>
+            <h3 class="mTitle" id="mTitle">—</h3>
+            <div class="mMeta" id="mMeta">—</div>
+          </div>
+          <button class="close" id="mClose" aria-label="إغلاق">✕</button>
+        </div>
+
+        <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap" id="mPills"></div>
+
+        <div class="subline" style="margin-top:12px">
+          <span class="price" id="mPrice">—</span>
+          <span class="oldPrice" id="mOldPrice" style="display:none">—</span>
+          <span class="save" id="mSave" style="display:none">🔥 وفر —</span>
+        </div>
+
+        <p class="mDesc" id="mDesc">
+          —
+        </p>
+
+        <div class="mBuyRow">
+          <a class="btn" id="mAdd" href="#" onclick="alert('إضافة للسلة (واجهة فقط)');return false;">إضافة للسلة</a>
+          <a class="btn secondary" id="mBuy" href="#" target="_blank" rel="nofollow noopener">اشترِ الآن</a>
+        </div>
+
+        <div class="mini" style="margin-top:10px">
+          * زر “اشترِ الآن” يفتح رابط المنتج الحقيقي (سلة) إذا وضعته داخل بيانات المنتج.
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Hero -->
-  <main id="top" class="hero">
-    <div class="wrap">
-      <div class="heroGrid">
-        <section class="heroCard" aria-label="مقدمة">
-          <div class="heroInner">
-            <div class="kicker">جلابيات نسائية فخمة • خامات راقية • قطع محدودة</div>
-            <h1>أناقة تُشبهك…<br/>وتفاصيل تتكلم عنك ✨</h1>
-            <p class="sub">
-              اكتشفي جلابيات <b>REZO</b> بتصاميم أنثوية راقية تناسب المناسبات والسهرات.
-              كل قطعة مصممة بعناية لتمنحك حضورًا هادئًا وفخامة بلا تكلّف.
-            </p>
-
-            <div class="heroActions">
-              <a class="btn primary" href="#products">ابدئي التسوّق</a>
-              <a class="btn" href="#why">تعرفي على الجودة</a>
-              <span class="chip">شحن سريع داخل السعودية</span>
-              <span class="chip">استبدال سهل</span>
-            </div>
-
-            <div class="stats" aria-label="مؤشرات ثقة">
-              <div class="stat">
-                <b>تصاميم حصرية</b>
-                <span>قطع مختارة بعناية</span>
-              </div>
-              <div class="stat">
-                <b>خامات فاخرة</b>
-                <span>ملمس ناعم ومظهر راقٍ</span>
-              </div>
-              <div class="stat">
-                <b>كمية محدودة</b>
-                <span>لتتميزي بإطلالة نادرة</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <aside class="heroMedia" aria-label="صورة رئيسية">
-          <div class="mediaTop">
-            <span class="chip">✨ جديد الموسم</span>
-            <span class="chip">👑 فخامة هادئة</span>
-            <span class="chip">🧵 تفاصيل دقيقة</span>
-          </div>
-          <div class="heroImg">
-            <div class="placeholder">
-              <b>ضع/ي صورة البانر هنا</b>
-              <div class="small">استبدلي هذا القسم بصورة 1600×1200 أو 1200×900 (WebP/PNG)</div>
-              <div class="small">مثال: /images/hero.webp</div>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </div>
-
-    <!-- Features -->
-    <section class="section">
-      <div class="wrap">
-        <div class="grid3" aria-label="مميزات">
-          <div class="feature">
-            <div class="icon">🪡</div>
-            <h3>تفاصيل دقيقة</h3>
-            <p>قصّات أنثوية مريحة مع لمسات فخامة هادئة.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">🧵</div>
-            <h3>خامات مختارة</h3>
-            <p>قماش ناعم يمنحك الراحة مع مظهر راقٍ طوال اليوم.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">🚚</div>
-            <h3>تجربة موثوقة</h3>
-            <p>شحن سريع داخل المملكة + استبدال سهل.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products -->
-    <section id="products" class="section" aria-label="المنتجات">
-      <div class="wrap">
-        <div class="sectionTitle">
-          <div>
-            <h2>الجلابيات المختارة</h2>
-            <p>ابحثي وفلترّي حسب اللون والسعر ونوع المناسبة.</p>
-          </div>
-          <div class="miniLinks">
-            <span class="chip" id="resultCount">0 نتيجة</span>
-            <button class="btn" id="resetBtn" type="button">إعادة ضبط</button>
-          </div>
-        </div>
-
-        <!-- Filters -->
-        <div class="filters" role="search" aria-label="فلاتر المنتجات">
-          <input class="wide" id="q" type="search" placeholder="ابحثي عن: الأثير، الريم، مناسبات، لون..." autocomplete="off" />
-          <select id="color" aria-label="اللون">
-            <option value="">اللون (الكل)</option>
-            <option value="ivory">عاجي</option>
-            <option value="black">أسود</option>
-            <option value="ruby">أحمر كرزي</option>
-            <option value="navy">كحلي</option>
-            <option value="blush">وردي</option>
-          </select>
-          <select id="occasion" aria-label="المناسبة">
-            <option value="">المناسبة (الكل)</option>
-            <option value="occasion">مناسبات</option>
-            <option value="sahra">سهرات</option>
-            <option value="daily">يومي</option>
-          </select>
-          <select id="price" aria-label="السعر">
-            <option value="">السعر (الكل)</option>
-            <option value="0-199">أقل من 200</option>
-            <option value="200-299">200 - 299</option>
-            <option value="300-999">300 فأكثر</option>
-          </select>
-          <button class="btn primary" id="applyBtn" type="button">تطبيق</button>
-        </div>
-
-        <!-- Product Grid -->
-        <div class="products" id="grid" aria-live="polite"></div>
-
-        <div class="hr"></div>
-        <p class="small">
-          *هذا نموذج واجهة سريع. زر "اطلبي الآن" يفتح واتساب برسالة جاهزة أو رابط صفحة المنتج (عدّلي الرابط داخل بيانات المنتجات).
-        </p>
-      </div>
-    </section>
-
-    <!-- Why -->
-    <section id="why" class="section" aria-label="لماذا REZO">
-      <div class="wrap">
-        <div class="sectionTitle">
-          <div>
-            <h2>لماذا تختارين REZO؟</h2>
-            <p>لأنها ليست جلابية فقط… إنها تجربة أنوثة فاخرة.</p>
-          </div>
-        </div>
-
-        <div class="grid3">
-          <div class="feature">
-            <div class="icon">👑</div>
-            <h3>فخامة بلا تكلّف</h3>
-            <p>تصاميم تبرز الأناقة بهدوء وتناسب الذوق السعودي العصري.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">✨</div>
-            <h3>قطع محدودة</h3>
-            <p>إحساس الندرة يضمن لك تميّزًا بعيدًا عن التكرار.</p>
-          </div>
-          <div class="feature">
-            <div class="icon">🧷</div>
-            <h3>تفاصيل تهتم بك</h3>
-            <p>قصّات مريحة، خامات ناعمة، وتجربة شراء سهلة.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews -->
-    <section id="reviews" class="section" aria-label="آراء العميلات">
-      <div class="wrap">
-        <div class="sectionTitle">
-          <div>
-            <h2>آراء العميلات</h2>
-            <p>ثقة العميلات هي أجمل شهادة.</p>
-          </div>
-        </div>
-
-        <div class="testimonials">
-          <div class="quote">
-            <p>“القماش جدًا ناعم والتفاصيل فخمة… نفس الصور وأفضل.”</p>
-            <b>نورة</b><span>الرياض</span>
-          </div>
-          <div class="quote">
-            <p>“الجلابية مريحة وتعطي حضور قوي… التغليف راقٍ.”</p>
-            <b>سارة</b><span>جدة</span>
-          </div>
-          <div class="quote">
-            <p>“وصلت بسرعة… واخترت قطعة ثانية من جمال التصميم.”</p>
-            <b>شهد</b><span>الدمام</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section faq" aria-label="الأسئلة الشائعة">
-      <div class="wrap">
-        <div class="sectionTitle">
-          <div>
-            <h2>الأسئلة الشائعة</h2>
-            <p>إجابات مختصرة وواضحة قبل الطلب.</p>
-          </div>
-        </div>
-
-        <details>
-          <summary>كيف أعرف المقاس المناسب؟</summary>
-          <p>اكتبي لنا على واتساب بمقاساتك (الطول/الوزن/مقاسك المعتاد) ونقترح لك الخيار الأنسب.</p>
-        </details>
-        <details>
-          <summary>كم يستغرق الشحن داخل السعودية؟</summary>
-          <p>عادةً من 1 إلى 4 أيام عمل بحسب المدينة وشركة الشحن.</p>
-        </details>
-        <details>
-          <summary>هل يوجد استبدال أو إرجاع؟</summary>
-          <p>نعم، استبدال سهل وفق سياسة المتجر (حدّثي النص بحسب سياستك الرسمية).</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section" aria-label="التواصل">
-      <div class="wrap">
-        <div class="sectionTitle">
-          <div>
-            <h2>تواصلي معنا</h2>
-            <p>للاستفسار عن القطع، المقاسات، أو توفر الألوان.</p>
-          </div>
-          <div class="miniLinks">
-            <a class="btn primary" id="waContact" href="#" rel="nofollow">مراسلة واتساب</a>
-            <a class="btn" href="mailto:info@rezo.sa">info@rezo.sa</a>
-          </div>
-        </div>
-
-        <div class="feature">
-          <h3 style="margin:0 0 6px">رسالة جاهزة لواتساب</h3>
-          <p class="small" style="margin:0">
-            “مرحبًا REZO ✨ أود الاستفسار عن (اسم الجلابية) — اللون: ( ) — المقاس: ( )”
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="footerGrid">
-        <div>
-          <h4>REZO</h4>
-          <p style="margin:0;max-width:60ch">
-            جلابيات نسائية فخمة بتصاميم أنثوية راقية وخامات مختارة بعناية — لأن الأناقة تبدأ من التفاصيل.
-          </p>
-          <div class="miniLinks" style="margin-top:10px">
-            <span class="chip">© <span id="y"></span> REZO</span>
-            <span class="chip">Made for Vercel + GitHub</span>
-          </div>
-        </div>
-        <div>
-          <h4>روابط</h4>
-          <a href="#products">الجلابيات</a><br/>
-          <a href="#why">لماذا REZO</a><br/>
-          <a href="#faq">الأسئلة الشائعة</a>
-        </div>
-        <div>
-          <h4>سياسات</h4>
-          <a href="#" onclick="alert('ضع رابط صفحة السياسة هنا'); return false;">سياسة الاستبدال والإرجاع</a><br/>
-          <a href="#" onclick="alert('ضع رابط صفحة الشحن هنا'); return false;">الشحن والتوصيل</a><br/>
-          <a href="#" onclick="alert('ضع رابط الخصوصية هنا'); return false;">الخصوصية</a>
-        </div>
-      </div>
-
-      <div class="hr"></div>
-      <div class="small">ملاحظة: استبدل الروابط والصور والمنتجات ببيانات متجرك الفعلية.</div>
-    </div>
-  </footer>
-
-  <!-- WhatsApp floating -->
-  <a class="wa" id="waFloat" href="#" rel="nofollow" aria-label="التواصل عبر واتساب">
-    <span class="dot" aria-hidden="true"></span>
-    <b>واتساب</b>
-    <span class="small">طلب / استفسار</span>
-  </a>
-
   <script>
     // =========================
-    // CONFIG
+    // إعدادات
     // =========================
-    const WHATSAPP_NUMBER = "966570905999"; // ← غيّره لرقمك (بدون +)
-    const WHATSAPP_DEFAULT_MSG = "مرحبًا REZO ✨ أود الاستفسار عن الجلابيات المتوفرة.";
+    const WHATSAPP_NUMBER = "966500000000"; // ← غيّر الرقم
+    const WA_DEFAULT = "مرحبًا REZO ✨ أود الاستفسار عن جلابيات REZO.";
 
-    // Example products (عدّلها بمنتجاتك وروابطك وصورك)
-    // image: ضع مسار صورة مثل /images/athir.webp
-    // url: رابط صفحة المنتج عندك (سلة/شوبيفاي/صفحة داخلية)
+    const CATEGORIES = {
+      reem:  "جلابيات الريم",
+      noor:  "جلابيات النور",
+      athir: "جلابيات الأثير",
+      mada:  "جلابيات المدى",
+      uroob: "جلابيات العروب"
+    };
+
+    // =========================
+    // بيانات المنتجات (عدّلها حسب متجرك)
+    // ضع الصور داخل /images/ مثلاً: /images/noor-red.webp
+    // url: رابط صفحة المنتج في سلة (أو اتركه فارغ فيفتح واتساب)
+    // =========================
     const PRODUCTS = [
+      // --- النور (مثال مشابه للصورة) ---
       {
-        id: "athir",
-        name: "جلابية الأثير",
-        price: 289,
-        color: "ivory",
-        occasion: "occasion",
-        badge: "limited",
-        tags: ["فخمة", "تفاصيل راقية", "مناسبات"],
-        desc: "قصّة انسيابية وخامة ناعمة تمنح حضورًا هادئًا وفخمًا.",
-        image: "",
-        url: ""
+        id:"noor-red-problack",
+        cat:"noor",
+        name:"جلابية النور أحمر ناري Pro Black",
+        price:220,
+        oldPrice:320,
+        available:true,
+        exclusive:true,
+        image:"/images/noor-red.webp",
+        desc:"فخامة لافتة بحضور لا يُنسى. تصميم أنيق بقماش ناعم وانسيابية راقية تمنحك حضورًا هادئًا ولمسة فخامة دون مبالغة. اختيار مثالي لإطلالة راقية ومريحة في آنٍ واحد.",
+        url:"" // ضع رابط سلة هنا
       },
       {
-        id: "reem",
-        name: "جلابية الريم",
-        price: 249,
-        color: "navy",
-        occasion: "daily",
-        badge: "new",
-        tags: ["مريحة", "يومي", "أناقة بسيطة"],
-        desc: "اختيار أنيق للاستخدام اليومي بلمسة أنثوية.",
-        image: "",
-        url: ""
+        id:"noor-ruby-white",
+        cat:"noor",
+        name:"جلابية النور كرزي بكلفة بيضاء",
+        price:220,
+        oldPrice:320,
+        available:true,
+        exclusive:true,
+        image:"/images/noor-ruby.webp",
+        desc:"أناقة كرزية بلمسة بيضاء راقية. تفصيل هادئ وخامة مريحة تناسب المناسبات والسهرات.",
+        url:""
       },
+
+      // --- الريم ---
       {
-        id: "uroob",
-        name: "جلابية العروب",
-        price: 329,
-        color: "ruby",
-        occasion: "sahra",
-        badge: "limited",
-        tags: ["سهرات", "حضور قوي", "قطعة محدودة"],
-        desc: "تفاصيل مميزة لإطلالة ملفتة في المناسبات والسهرات.",
-        image: "",
-        url: ""
+        id:"reem-navy",
+        cat:"reem",
+        name:"جلابية الريم كحلي",
+        price:199,
+        oldPrice:null,
+        available:true,
+        exclusive:false,
+        image:"/images/reem-navy.webp",
+        desc:"قصة أنثوية مريحة للاستخدام اليومي بلمسة راقية.",
+        url:""
+      },
+
+      // --- الأثير ---
+      {
+        id:"athir-ivory",
+        cat:"athir",
+        name:"جلابية الأثير عاجي",
+        price:289,
+        oldPrice:349,
+        available:true,
+        exclusive:true,
+        image:"/images/athir-ivory.webp",
+        desc:"تفاصيل ناعمة وفخامة هادئة لذوقٍ يعرف قيمته.",
+        url:""
+      },
+
+      // --- المدى ---
+      {
+        id:"mada-black",
+        cat:"mada",
+        name:"جلابية المدى أسود",
+        price:239,
+        oldPrice:null,
+        available:true,
+        exclusive:false,
+        image:"/images/mada-black.webp",
+        desc:"أسود كلاسيكي بلمسة REZO: راحة وأناقة بدون مجهود.",
+        url:""
+      },
+
+      // --- العروب ---
+      {
+        id:"uroob-ruby",
+        cat:"uroob",
+        name:"جلابية العروب كرزي",
+        price:329,
+        oldPrice:399,
+        available:true,
+        exclusive:true,
+        image:"/images/uroob-ruby.webp",
+        desc:"قطعة مميزة لإطلالة حضورها قوي في السهرات والمناسبات.",
+        url:""
       }
     ];
 
     // =========================
-    // HELPERS
+    // Helpers
     // =========================
-    const $ = (sel) => document.querySelector(sel);
-    const esc = (s) => (s ?? "").toString().replace(/[&<>"']/g, m => ({
-      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
-    }[m]));
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => Array.from(document.querySelectorAll(s));
 
-    function waLink(message){
-      const text = encodeURIComponent(message || WHATSAPP_DEFAULT_MSG);
-      return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+    function waLink(msg){
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg||WA_DEFAULT)}`;
     }
 
-    function priceInRange(p, range){
-      if(!range) return true;
-      const [min,max] = range.split("-").map(Number);
-      return p >= min && p <= max;
+    function fmtSAR(n){
+      if(n == null) return "";
+      return `${n} ر.س`;
     }
 
-    function normalizeArabic(s){
-      return (s || "")
-        .toString()
-        .trim()
-        .toLowerCase();
-    }
-
-    function render(products){
-      const grid = $("#grid");
-      grid.innerHTML = "";
-
-      products.forEach(p => {
-        const badgeText = p.badge === "limited" ? "كمية محدودة" : (p.badge === "new" ? "جديد" : "");
-        const badgeClass = p.badge === "limited" ? "limited" : (p.badge === "new" ? "new" : "");
-
-        const imgHtml = p.image
-          ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy" />`
-          : `<div class="placeholder" style="width:min(320px,80%);">
-               <b>${esc(p.name)}</b>
-               <div class="small">ضعي صورة المنتج هنا</div>
-               <div class="small">/images/${esc(p.id)}.webp</div>
-             </div>`;
-
-        const waMsg = `مرحبًا REZO ✨ أود طلب/الاستفسار عن: ${p.name}\nالسعر: ${p.price} ر.س\nاللون: ${colorLabel(p.color)}\nالمناسبة: ${occasionLabel(p.occasion)}`;
-
-        const buyHref = p.url ? p.url : waLink(waMsg);
-        const buyText = p.url ? "عرض المنتج" : "اطلبي الآن";
-
-        grid.insertAdjacentHTML("beforeend", `
-          <article class="card" data-id="${esc(p.id)}">
-            <div class="cardMedia">
-              ${badgeText ? `<div class="badge ${badgeClass}">${esc(badgeText)}</div>` : ""}
-              ${imgHtml}
-            </div>
-            <div class="cardBody">
-              <div class="titleRow">
-                <h3 class="pTitle">${esc(p.name)}</h3>
-                <div class="price">${esc(p.price)} ر.س</div>
-              </div>
-              <div class="pMeta">
-                <span class="chip">اللون: ${esc(colorLabel(p.color))}</span>
-                <span class="chip">المناسبة: ${esc(occasionLabel(p.occasion))}</span>
-              </div>
-              <p class="pDesc">${esc(p.desc)}</p>
-              <div class="pMeta">
-                ${p.tags.map(t => `<span class="chip">${esc(t)}</span>`).join("")}
-              </div>
-            </div>
-            <div class="cardActions">
-              <a class="btn primary" href="${esc(buyHref)}" target="_blank" rel="nofollow noopener">${esc(buyText)}</a>
-              <a class="btn" href="${esc(waLink(waMsg))}" target="_blank" rel="nofollow noopener">واتساب المقاس</a>
-            </div>
-          </article>
-        `);
-      });
-
-      $("#resultCount").textContent = `${products.length} نتيجة`;
-      injectProductSchema(products);
-    }
-
-    function colorLabel(c){
-      return ({
-        "ivory":"عاجي",
-        "black":"أسود",
-        "ruby":"أحمر كرزي",
-        "navy":"كحلي",
-        "blush":"وردي"
-      }[c] || "—");
-    }
-    function occasionLabel(o){
-      return ({
-        "occasion":"مناسبات",
-        "sahra":"سهرات",
-        "daily":"يومي"
-      }[o] || "—");
-    }
-
-    function filterProducts(){
-      const q = normalizeArabic($("#q").value);
-      const color = $("#color").value;
-      const occ = $("#occasion").value;
-      const price = $("#price").value;
-
-      const out = PRODUCTS.filter(p => {
-        const hay = normalizeArabic([p.name, p.desc, ...(p.tags||[])].join(" "));
-        const matchQ = !q || hay.includes(q);
-        const matchColor = !color || p.color === color;
-        const matchOcc = !occ || p.occasion === occ;
-        const matchPrice = priceInRange(p.price, price);
-        return matchQ && matchColor && matchOcc && matchPrice;
-      });
-
-      render(out);
-      updateUrlState();
-    }
-
-    function updateUrlState(){
-      const params = new URLSearchParams();
-      const q = $("#q").value.trim();
-      if(q) params.set("q", q);
-      if($("#color").value) params.set("color", $("#color").value);
-      if($("#occasion").value) params.set("occ", $("#occasion").value);
-      if($("#price").value) params.set("price", $("#price").value);
-      const newUrl = params.toString() ? `?${params.toString()}` : location.pathname;
-      history.replaceState({}, "", newUrl);
-    }
-
-    function loadUrlState(){
-      const params = new URLSearchParams(location.search);
-      $("#q").value = params.get("q") || "";
-      $("#color").value = params.get("color") || "";
-      $("#occasion").value = params.get("occ") || "";
-      $("#price").value = params.get("price") || "";
-    }
-
-    // Inject Product schema (simple)
-    function injectProductSchema(items){
-      // Remove old
-      document.querySelectorAll('script[data-schema="products"]').forEach(n => n.remove());
-
-      const list = items.map(p => ({
-        "@type":"Product",
-        "name": p.name,
-        "description": p.desc,
-        "brand": {"@type":"Brand","name":"REZO"},
-        "offers":{
-          "@type":"Offer",
-          "priceCurrency":"SAR",
-          "price": p.price,
-          "availability":"https://schema.org/InStock",
-          "url": p.url || ("https://rezo.sa/#products")
-        }
-      }));
-
-      const json = {
-        "@context":"https://schema.org",
-        "@type":"ItemList",
-        "itemListElement": list.map((it, idx) => ({
-          "@type":"ListItem",
-          "position": idx + 1,
-          "item": it
-        }))
-      };
-
-      const s = document.createElement("script");
-      s.type = "application/ld+json";
-      s.dataset.schema = "products";
-      s.textContent = JSON.stringify(json);
-      document.head.appendChild(s);
+    function calcSave(p){
+      if(p.oldPrice && p.price && p.oldPrice > p.price){
+        return p.oldPrice - p.price;
+      }
+      return null;
     }
 
     // =========================
-    // EVENTS
+    // State
     // =========================
-    function bindWhatsAppButtons(){
-      const link = waLink(WHATSAPP_DEFAULT_MSG);
-      $("#waHeader").href = link;
-      $("#waContact").href = link;
-      $("#waFloat").href = link;
-    }
+    let currentCat = "noor";
 
-    $("#applyBtn").addEventListener("click", filterProducts);
-    $("#resetBtn").addEventListener("click", () => {
+    function setCat(cat){
+      currentCat = cat;
+      // Update UI titles
+      $("#pageTitle").textContent = CATEGORIES[cat] || "الجلابيات";
+      $("#crumbCat").textContent = CATEGORIES[cat] || "الجلابيات";
+
+      // Tabs
+      $$(".tab").forEach(t => t.classList.toggle("active", t.dataset.cat === cat));
+
+      // Clear search
       $("#q").value = "";
-      $("#color").value = "";
-      $("#occasion").value = "";
-      $("#price").value = "";
-      filterProducts();
-    });
-    $("#q").addEventListener("input", () => {
-      // live search (خفيف)
-      filterProducts();
-    });
-    ["color","occasion","price"].forEach(id => {
-      $("#"+id).addEventListener("change", filterProducts);
+      render();
+      // Update URL
+      const params = new URLSearchParams(location.search);
+      params.set("cat", cat);
+      history.replaceState({}, "", `?${params.toString()}`);
+    }
+
+    function getFiltered(){
+      const q = ($("#q").value || "").trim().toLowerCase();
+      const sort = $("#sort").value;
+
+      let items = PRODUCTS.filter(p => p.cat === currentCat);
+
+      if(q){
+        items = items.filter(p =>
+          (p.name||"").toLowerCase().includes(q) ||
+          (p.desc||"").toLowerCase().includes(q)
+        );
+      }
+
+      // sorting
+      const bySave = (p) => calcSave(p) || 0;
+      if(sort === "priceAsc") items.sort((a,b)=> (a.price||0) - (b.price||0));
+      if(sort === "priceDesc") items.sort((a,b)=> (b.price||0) - (a.price||0));
+      if(sort === "sale") items.sort((a,b)=> bySave(b) - bySave(a));
+
+      return items;
+    }
+
+    function cardHTML(p){
+      const save = calcSave(p);
+      const buyMsg = `مرحبًا REZO ✨ أود طلب/الاستفسار عن: ${p.name}\nالسعر: ${fmtSAR(p.price)}\nالقسم: ${CATEGORIES[p.cat] || ""}`;
+      const buyUrl = p.url ? p.url : waLink(buyMsg);
+
+      return `
+        <article class="card">
+          <div class="media">
+            <div class="flagRow">
+              ${p.available ? `<div class="flag">✔ متوفر</div>` : `<div class="flag" style="background:#fef2f2;color:#b91c1c;border-color:#fecaca">غير متوفر</div>`}
+              ${p.exclusive ? `<div class="flag exclusive">حصري</div>` : `<div></div>`}
+            </div>
+
+            ${p.image
+              ? `<img src="${p.image}" alt="${escapeHtml(p.name)}" loading="lazy">`
+              : `<div style="color:#64748b;font-weight:900;text-align:center;padding:14px">
+                  ضع صورة المنتج هنا<br><span style="font-weight:700;font-size:13px">/images/${p.id}.webp</span>
+                 </div>`}
+
+            <div class="quickBtns">
+              <button class="qbtn" title="عرض سريع" onclick="openModal('${p.id}')">👁️</button>
+              <button class="qbtn" title="مفضلة" onclick="toast('تمت الإضافة للمفضلة')">♡</button>
+            </div>
+          </div>
+
+          <div class="body">
+            <h3 class="name">${escapeHtml(p.name)}</h3>
+
+            <div class="subline">
+              ${save ? `<span class="save">🔥 وفر ${fmtSAR(save)}</span>` : ``}
+            </div>
+
+            <div class="subline" style="margin-top:-2px">
+              <span class="price">${fmtSAR(p.price)}</span>
+              ${p.oldPrice ? `<span class="oldPrice">${fmtSAR(p.oldPrice)}</span>` : ``}
+            </div>
+          </div>
+
+          <div class="cta">
+            <a class="btn" href="#" onclick="toast('إضافة للسلة (واجهة فقط)');return false;">إضافة للسلة</a>
+            <a class="btn secondary" href="${buyUrl}" target="_blank" rel="nofollow noopener">اشترِ الآن</a>
+          </div>
+        </article>
+      `;
+    }
+
+    function render(){
+      const items = getFiltered();
+      $("#grid").innerHTML = items.map(cardHTML).join("");
+      $("#resultCount").textContent = `${items.length} منتج`;
+    }
+
+    // =========================
+    // Modal
+    // =========================
+    function openModal(id){
+      const p = PRODUCTS.find(x=>x.id===id);
+      if(!p) return;
+
+      const save = calcSave(p);
+      const buyMsg = `مرحبًا REZO ✨ أود طلب/الاستفسار عن: ${p.name}\nالسعر: ${fmtSAR(p.price)}\nالقسم: ${CATEGORIES[p.cat] || ""}`;
+      const buyUrl = p.url ? p.url : waLink(buyMsg);
+
+      $("#mTitle").textContent = p.name;
+      $("#mMeta").textContent = `${CATEGORIES[p.cat] || ""} • ${p.available ? "المنتج متوفر" : "غير متوفر"}`;
+      $("#mDesc").textContent = p.desc || "";
+
+      $("#mPrice").textContent = fmtSAR(p.price);
+      if(p.oldPrice){
+        $("#mOldPrice").style.display = "";
+        $("#mOldPrice").textContent = fmtSAR(p.oldPrice);
+      }else{
+        $("#mOldPrice").style.display = "none";
+      }
+
+      if(save){
+        $("#mSave").style.display = "";
+        $("#mSave").textContent = `🔥 وفر ${fmtSAR(save)}`;
+      }else{
+        $("#mSave").style.display = "none";
+      }
+
+      $("#mImg").src = p.image || "";
+      $("#mImg").alt = p.name;
+
+      // pills
+      const pills = [];
+      pills.push(`<span class="pill">${p.available ? "✔ متوفر" : "✕ غير متوفر"}</span>`);
+      if(p.exclusive) pills.push(`<span class="pill">حصري</span>`);
+      if(save) pills.push(`<span class="pill">خصم</span>`);
+      $("#mPills").innerHTML = pills.join("");
+
+      $("#mBuy").href = buyUrl;
+
+      $("#modalBack").style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      $("#modalBack").style.display = "none";
+      document.body.style.overflow = "";
+    }
+
+    // =========================
+    // UX small
+    // =========================
+    function toast(msg){
+      const t = document.createElement("div");
+      t.textContent = msg;
+      t.style.position="fixed";
+      t.style.left="50%";
+      t.style.bottom="110px";
+      t.style.transform="translateX(-50%)";
+      t.style.background="#0f172a";
+      t.style.color="#fff";
+      t.style.padding="10px 14px";
+      t.style.borderRadius="14px";
+      t.style.fontWeight="900";
+      t.style.boxShadow="0 18px 50px rgba(2,6,23,.25)";
+      t.style.zIndex="100";
+      document.body.appendChild(t);
+      setTimeout(()=>{ t.remove(); }, 1400);
+    }
+
+    function escapeHtml(s){
+      return (s||"").replace(/[&<>"']/g, m => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+      }[m]));
+    }
+
+    // =========================
+    // Events
+    // =========================
+    $$(".tab").forEach(btn => {
+      btn.addEventListener("click", () => setCat(btn.dataset.cat));
     });
 
-    // init
-    document.addEventListener("DOMContentLoaded", () => {
-      $("#y").textContent = new Date().getFullYear();
-      bindWhatsAppButtons();
-      loadUrlState();
-      render(PRODUCTS);
-      // apply url filters if any
-      filterProducts();
+    $("#q").addEventListener("input", render);
+    $("#sort").addEventListener("change", render);
+
+    $("#searchFocus").addEventListener("click", () => $("#q").focus());
+
+    $("#modalBack").addEventListener("click", (e) => {
+      if(e.target.id === "modalBack") closeModal();
     });
+    $("#mClose").addEventListener("click", closeModal);
+    document.addEventListener("keydown", (e)=> {
+      if(e.key === "Escape") closeModal();
+    });
+
+    // WhatsApp
+    $("#waFloat").href = waLink(WA_DEFAULT);
+
+    // Init from URL
+    (function init(){
+      const params = new URLSearchParams(location.search);
+      const cat = params.get("cat");
+      if(cat && CATEGORIES[cat]) currentCat = cat;
+
+      // set active tab + titles
+      $$(".tab").forEach(t => t.classList.toggle("active", t.dataset.cat === currentCat));
+      $("#pageTitle").textContent = CATEGORIES[currentCat];
+      $("#crumbCat").textContent = CATEGORIES[currentCat];
+      render();
+    })();
+
+    // expose openModal for inline onclick
+    window.openModal = openModal;
+    window.toast = toast;
   </script>
 </body>
 </html>
